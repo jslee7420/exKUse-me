@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* 화면 너비 768 이하는 모바일 해상도 css */
 @media all and (max-width: 768px) {
     #description{
         width: 350px;
@@ -26,7 +27,7 @@
     }
 }
 
-
+/* 화면 너비 768 이상은 데스크탑 해상도 css */
 @media all and (min-width: 769px) {
     #description{
         width: 350px;
