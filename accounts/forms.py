@@ -7,7 +7,6 @@ class SignUpForm(UserCreationForm):
     password1 = forms.CharField(
         label='비밀번호',
         widget=forms.PasswordInput(attrs={'class': 'input_box'})
-        
     )
     password2 = forms.CharField(
         label='비밀번호 확인',
@@ -17,7 +16,7 @@ class SignUpForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         # 커스텀 유저 모델이 아닌 직접 정의한 유저 모델을 사용하므로 get_user_model()을 사용
         model = get_user_model()
-        fields = ('country', 'first_name', 'last_name', 'username', 'password1', 'password2', 'email',  'introduction',)
+        fields = ('profile_picture','country', 'first_name', 'last_name', 'username', 'password1', 'password2', 'email', 'introduction',)
         widgets = {
             'first_name': forms.TextInput(
                 attrs={

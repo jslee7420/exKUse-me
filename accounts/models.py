@@ -11,7 +11,7 @@ class User(AbstractUser):
     major = models.CharField(max_length=100)
     introduction = models.CharField(max_length=200, blank=True)
     # online_letter = models.BooleanField(default=True) 삭제
-    profile_picture = models.ImageField(blank=True)
+    profile_picture = models.ImageField(blank=True, upload_to='media/')
 
 
 class NativeLanguage(models.Model):

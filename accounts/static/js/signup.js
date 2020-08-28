@@ -1,0 +1,19 @@
+$(document).ready(function(){
+     // 클릭시 변환 효과
+    $(".native_lng").click(function(){
+        $("#nativeMenuButton").text($(this).text());
+        $("#nativeMenuButton").val($(this).text());
+   });
+   $(".native_lev").click(function(){
+        $("#nativeLevelButton").text($(this).text());
+        $("#nativeLevelButton").val($(this).text());
+   });
+   $(".study_lng").click(function(){
+        $("#studyingMenuButton").text($(this).text());
+        $("#studyingMenuButton").val($(this).text());
+   });
+   $(".study_lev").click(function(){
+        $("#studyingLevelButton").text($(this).text());
+        $("#studyingLevelButton").val($(this).text());
+   });
+})

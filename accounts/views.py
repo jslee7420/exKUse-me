@@ -3,6 +3,7 @@ from django.contrib.auth import login as django_login
 from django.contrib.auth import authenticate
 from .forms import SignUpForm, LoginForm
 
+
 def login(request):
     form = LoginForm(request.POST or None)
     if request.method == 'POST':
@@ -11,7 +12,7 @@ def login(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             django_login(request, user)
-            return redirect('photo:list')
+            # return redirect('photo:list')
         form.add_error(None, "login_failed")
     return render(request, 'accounts/login.html', {'form': form})
 
