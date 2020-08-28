@@ -1,0 +1,21 @@
+#logo{
+    display: inline-block;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    color: #393939;
+}
+#finger{
+    margin-left: 3px;
+}
+.navbar{
+    background: #00FFD1;
+    backdrop-filter: blur(27.1828px);
+}

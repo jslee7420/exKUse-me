@@ -1,0 +1,32 @@
+a{
+    text-decoration: none;
+    color: #393939;
+}
+.method_button{
+    width: 246px;
+    height: 106px;
+    margin: 0 auto;
+    line-height: 106px;
+    border-radius: 16px;
+    text-align: center;
+}
+#korean_button{
+    margin-top: 212px;
+    background-color: #00FFD1;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 106px;
+}
+#foreign_button{
+    margin-top: 31px;
+    background-color: #F8F8F8;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 106px;
+}

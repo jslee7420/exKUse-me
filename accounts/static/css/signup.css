@@ -1,0 +1,98 @@
+#description{
+    position: relative;
+    left: -50px;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 76px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 32px;
+    letter-spacing: 0.41px;
+    color: #393939;
+}
+#add_profile_pic{
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+    margin-top: 29px;
+}
+
+#lng_container{
+    margin-top: 33px;
+}
+.dropdown{
+    display: inline;
+}
+.dropdown-toggle{
+    margin-left: 21px;
+    width: 100px;
+    background: #F8F8F8;
+    border-radius: 16px;
+    color: black;
+}
+.dropdown-menu{
+    width: 100px;
+    background: #F8F8F8;
+    border-radius: 16px;
+    color: black;
+    min-width: 102px;
+}
+.dropdown-item{
+    width: 100px;
+    background: #F8F8F8;
+    border-radius: 16px;
+    color: black;
+}
+.level{
+    position: relative;
+    left: 50px;
+}
+
+#signup_form{
+    display: block;
+    width: 390px;
+    height: 500px;
+    margin: 0 auto;
+}
+label{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    color: #393939;
+    margin-top: 20px;
+    line-height: 42px;
+
+}
+.input_box{
+    float: right;
+    margin-right: 40px;
+    width: 252px;
+    height: 42px;
+    background: #F8F8F8;
+    border-radius: 16px;
+    border: 0;
+    margin-top: 20px;
+}
+.long_box{
+    height: 100px;
+}
+
+#submit_btn{
+    display: block;
+    width: 246px;
+    height: 48px;
+    position: relative;
+    top: 150px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+
+    background: #00FFD1;
+    border-radius: 16px;
+    border: 0;
+}
