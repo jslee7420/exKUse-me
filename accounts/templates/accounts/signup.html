@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% load static %}
+{% block content %}
+<link href="{% static 'css/signup.css' %}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<div id="container">
+    <div id="description">
+        <p>회원가입하고</p>
+        <p>외국인 친구 만나러 가요!</p>
+    </div>
+    <div id="add_profile_pic">
+        <img src="{% static 'img/add_profile_pic.png'%}">
+    </div>
+
+    <form id="signup_form" method="POST">
+    {% csrf_token %}
+        <div id="lng_container">
+            <div class="dropdown">
+                <label>
+                    사용하는 언어
+                </label>
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="nativeMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    선택
+                </button>
+                <div class="dropdown-menu" aria-labelledby="nativeMenuButton">
+                    <a class="dropdown-item" href="#">EN</a>
+                    <a class="dropdown-item" href="#">KR</a>
+                    <a class="dropdown-item" href="#">CN</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="nativeLevelButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    수준
+                </button>
+                <div class="dropdown-menu" aria-labelledby="nativeLevelButton">
+                    <a class="dropdown-item" href="#">고급</a>
+                    <a class="dropdown-item" href="#">중급</a>
+                    <a class="dropdown-item" href="#">초급</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <label>
+                    배우는 언어
+                </label>
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="studyingMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    선택
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">EN</a>
+                    <a class="dropdown-item" href="#">KR</a>
+                    <a class="dropdown-item" href="#">CN</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="studyingLevelButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    수준
+                </button>
+                <div class="dropdown-menu" aria-labelledby="studyingLevelButton">
+                    <a class="dropdown-item" href="#">고급</a>
+                    <a class="dropdown-item" href="#">중급</a>
+                    <a class="dropdown-item" href="#">초급</a>
+                </div>
+            </div>
+        </div>
+        {{ form.as_p }}
+        <input type="submit" id="submit_btn" value="가입하기"/>
+    </form>
+</div>
+{% endblock %}
