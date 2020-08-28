@@ -10,15 +10,14 @@
 <section>
     <div id="header" class="my-5">조금 용기를 내어<br>먼저 말을 걸어볼까요?</div>
 
-    <div class="container backgroun-dark">
+    <div class="container">
         {% for user in users %}
-        <div class="row user_box my-3 ">
-            <div class="col">
-                <div class="container">
-                    <a class="row" href="{% url 'user_info' id=user.id %}">
-                        <div class="col-3 background">
-                            <div class="rounded-circle">
-                                {% if user.profile_image == null %}
+        <a class="row user_box my-3 " href="{% url 'user_info' id=user.id %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="rounded-circle">
+                            {% if user.profile_image == null %}
                             <svg width="100%" height="100%" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -27,29 +26,24 @@
                             {% else %}
                             {{user.profile_image}}
                             {% endif %}
-                            </div>
-                            
                         </div>
-                        <div class="col-3">
-                            <p>{{user.last_name}} {{user.country}}</p>
-                        </div>
-                        <div class="col">
-                            {% for lang in user.studying_language.all %}
-                            <p>{{lang.language}} {{lang.level}}</p>
-                            {% endfor %}
-                        </div>
-                        <div>
-                            <p>{{user.information}}</p>
-                        </div>
-                    </a>
+
+                    </div>
+                    <div class="col">
+                        <p>{{user.last_name}} {{user.country}}</p>
+                    
+                    
+                        {% for lang in user.studying_language.all %}
+                        <p>{{lang.language}} {{lang.level}}</p>
+                        {% endfor %}
+                    </div>
                 </div>
-
-
+                <div class="row mx-2">
+                    <p>{{user.introduction}}</p>
+                </div>
             </div>
-        </div>
+        </a>
         {% endfor %}
-
-    </div>
     </div>
 </section>
 {% endblock %}

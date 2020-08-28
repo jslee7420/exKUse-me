@@ -1,3 +1,22 @@
 .profile{
     width:30%;
 }
+
+
+.rounded-circle{
+    border:solid;
+    border-width:4px;
+    border-color:#00FFD1;
+    width:30%
+}
+
+.bio_title{
+    font-weight:bold;
+}
+
+.btn-emerald{
+    background-color:#00FFD1;
+    border-radius:15px;
+    font-size:1rem;
+    font-weight:bold;
+}

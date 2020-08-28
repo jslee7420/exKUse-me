@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import User
+from .models import User, FriendshipRequest
 from django.contrib.auth import login as django_login
 from django.contrib.auth import authenticate
 from .forms import SignUpForm, LoginForm
+
 
 
 def login(request):
@@ -29,10 +30,9 @@ def user_list(request):
 def user_info(request, id):
     """
     파트너 정보
-    """
+    """   
     user = get_object_or_404(User, id=id)
     context={'user':user}
-
     return render(request, 'accounts/user_info.html', context)
 
 def select_signup_method(request):

@@ -5,32 +5,25 @@
 }
 
 .user_box{
-    border:solid;
-    border-width: 0.5px;
-    border-radius: 1rem;
-    width:90%;
+    border-radius: 10px;
+    width:95%;
     margin:auto;
-}
-
-.rounded-circle{
-    background-color:black;
-    
-    
+    background-color:#E5E5E5;
 }
 
 .background{
     background-color:grey;
 }
 
-.rounded{
-    border-radius: 50%;
-}
+
 
 .col p{
     font-size:1rem;
 }
 
-.background-dark{
-    background-color:#E5E5E5;
+.rounded-circle{
+    border:solid;
+    border-width:4px;
+    border-color:#00FFD1;
 }
-}
+

@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
+
 class User(AbstractUser):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
@@ -15,10 +16,8 @@ class User(AbstractUser):
 
 
 class NativeLanguage(models.Model):
-<<<<<<< HEAD
     user= models.ForeignKey(User, on_delete=models.CASCADE, related_name="native_language")
     language=models.CharField(max_length=100)
-
 
 class StudyingLanguage(models.Model):
     user= models.ForeignKey(User, on_delete=models.CASCADE, related_name="studying_language")
@@ -33,25 +32,10 @@ class StudyingLanguage(models.Model):
 
 class FriendshipRequest(models.Model):
     """ Model to represent friendship requests """
-    from_user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='friendship_requests_sent')
-    to_user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='friendship_requests_received')
+    from_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friendship_requests_sent')
+    to_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friendship_requests_received')
 
 class Friend(models.Model):
     """ Model to represent Friendships """
-    to_user = models.ForeignKey(AUTH_USER_MODEL, models.CASCADE, related_name='friends')
-    from_user = models.ForeignKey(AUTH_USER_MODEL, models.CASCADE, related_name='_unused_friend_relation')
-=======
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    language = models.CharField(max_length=100)
-
-
-class StudyingLanguage(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    language = models.CharField(max_length=100)
-    LEVEL_CHOICES = [
-        ('BASIC', 'BASIC'),
-        ('INTERMIDIATE', 'INTERMIDIATE'),
-        ('ADVANCED', 'ADVANCED'),
-    ]
-    level = models.CharField(choices=LEVEL_CHOICES, default='BASIC', max_length=50)
->>>>>>> 1d5fbae35cefb10c769a7d706038f4b1583cf11f
+    to_user = models.ForeignKey(User, models.CASCADE, related_name='friends')
+    from_user = models.ForeignKey(User, models.CASCADE, related_name='_unused_friend_relation')
