@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+@media all and (max-width: 768px) {
+    #description{
+        width: 350px;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 86px;
+        font-style: normal;
+        font-weight: bold;
+        font-family: Roboto;
+        font-size: 25px;
+        letter-spacing: 0.41px;
+        color: #393939;
+    }
+    #form_container{
+        margin: 0 auto;
+        text-align: center;
+    }
+    #submit_btn{
+        width: 246px;
+        height: 48px;
+        background: #00FFD1;
+        border-radius: 16px;
+        border: 0;
+    }
+}
+
+
+@media all and (min-width: 769px) {
+    #description{
+        width: 350px;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 86px;
+        font-style: normal;
+        font-weight: bold;
+        font-family: Roboto;
+        font-size: 25px;
+        letter-spacing: 0.41px;
+        color: #393939;
+    }
+    #form_container{
+        margin: 0 auto;
+        text-align: center;
+    }
+    #submit_btn{
+        width: 246px;
+        height: 48px;
+        background: #00FFD1;
+        border-radius: 16px;
+        border: 0;
+    }
+}
