@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
+from .models import FriendshipRequest, Friend
 
 
 class SignUpForm(UserCreationForm):
@@ -92,3 +93,9 @@ class LoginForm(forms.ModelForm):
         help_texts = {
             'username': ''
         }
+
+
+class FriendshipRelationForm(forms.ModelForm):
+    class Meta:
+        model=FriendshipRequest
+        fields=['from_user','to_user']

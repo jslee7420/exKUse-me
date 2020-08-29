@@ -32,11 +32,16 @@
         <p class="bio_title text-left ml-2 mt-5">자기소개</p>
         <p class="content text-left ml-4">{{user.introduction}}</p>
     </div>
-    <div class="buttons">
-        <a class="btn btn-emerald btn-lg mt-5" href="#">언어교환 요청하기<img id="finger"
-            src="{% static 'img/pointing_finger.png' %}"></a>
+    <form>
+        <div class="buttons">
+            <button type="submit" class="btn btn-emerald btn-lg mt-5">언어교환 요청하기<img id="finger"
+                src="{% static 'img/pointing_finger.png' %}"></a>
+        </div>
+        <input type="hidden" name="from_user" id="from_user" value="{{request.user}}">
+        <input type="hidden" name="to_user" id="to_user" value="{{user}}">
 
-    </div>
+    </form>
+    
 </section>
 
 {% endblock %}
